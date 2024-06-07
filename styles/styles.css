@@ -11,6 +11,7 @@ body{
 }
 
 header{
+    padding:0;
     margin:auto;
     color: white;
     font-family: Arial;
@@ -19,6 +20,15 @@ header{
     background: rgb(13, 53, 144);
     width: 98%;
     border-radius: 10px;
+    margin-bottom :7px;
+}
+
+header a{
+    margin: 0;
+    padding: 0;
+}
+header h1{
+    margin-bottom: 3px;
 }
 
 .container{
