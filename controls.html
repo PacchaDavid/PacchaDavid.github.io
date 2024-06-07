@@ -87,29 +87,39 @@
 
     function moveSlider(event){
       switch(event.key){
-        case "ArrowUp":
+        case "w":
           slider1.value = parseInt(slider1.value) + 2;
           break;
-        case "ArrowDown":
+        case "s":
           slider1.value = parseInt(slider1.value) - 2;
           break;
-        case "ArrowRight":
+        case "d":
           slider2.value = parseInt(slider2.value) + 2;
           break;
-        case "ArrowLeft":
+        case "a":
           slider2.value = parseInt(slider2.value) - 2;
+          break;
+          case "j":
+          slider3.value = parseInt(slider3.value) - 2;
+          break;
+          case "k":
+          slider3.value = parseInt(slider3.value) + 2;
           break;
         default:
           break;
       }
       
-      if(event.key === "ArrowUp" || event.key === "ArrowDown"){
+      if(event.key === "w" || event.key === "s"){
         angle1.textContent = slider1.value;
         enviarSolicitudGET("/set_angle","angle1",slider1.value);
       }
-      if(event.key === "ArrowLeft" || event.key === "ArrowRight"){
-        enviarSolicitudGET("/set_angle","angle",slider2.value);
+      if(event.key === "a" || event.key === "d"){
+        enviarSolicitudGET("/set_angle","angle2",slider2.value);
         angle2.textContent = slider2.value;
+      }
+      if(event.key === "j" || event.key === "k"){
+        enviarSolicitudGET("/set_angle","angle3",slider3.value);
+        angle3.textContent = slider3.value;
       }
       
     }
