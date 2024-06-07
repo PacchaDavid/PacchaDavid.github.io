@@ -1,4 +1,6 @@
 # PacchaDavid.github.com.io
-![image](https://github.com/PacchaDavid/PacchaDavid.github.io/assets/166522789/79d9639f-5525-48b9-a886-db853028a854)
-![image](https://github.com/PacchaDavid/PacchaDavid.github.io/assets/166522789/01928a47-9ee0-4936-a9bf-f6925a213406)
+![image](https://github.com/PacchaDavid/PacchaDavid.github.io/assets/166522789/2cdf89a2-2c7f-4563-8ab1-70973b701d78)
+
+![image](https://github.com/PacchaDavid/PacchaDavid.github.io/assets/166522789/eb1cf4bc-8976-4508-9048-379546b40706)
+
 
