@@ -1,0 +1,155 @@
+body{
+    background: black;
+}
+#button_page{
+    font-size: 5px;
+    padding: 0;
+    margin: 0;
+}
+#button_page a{
+    text-decoration:none;
+}
+
+header{
+    margin:auto;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    background: rgb(13, 53, 144);
+    width: 98%;
+    border-radius: 10px;
+}
+
+.container{
+    display: flex;
+    height: auto;
+    margin:auto;
+}
+
+#cajaNegra{
+    background: black;
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    margin-left: 100px;
+}
+
+.subBox{
+    border-radius: 10px;
+    background:rgb(4, 71, 186);
+    width: 250px;
+    height: 120px;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.box{
+    text-align: center;
+    background: rgb(38, 107, 226);
+    height: 530px;
+    width: 640px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+img{
+    margin-top: 40px;
+}
+
+h3{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    background:rgb(32, 32, 203);
+    margin: 0;
+}
+#h3sup{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.control{
+    text-align: center;
+    margin: 0;
+}
+
+input[type=range]{
+    width: 75%;
+    height: 50px;
+    margin-bottom: 0;
+    padding: 0;
+    border:none;
+}
+
+button{
+    background-color: rgb(32, 32, 203);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-weight: bolder;
+    transition: transform 0.3s ease;
+    background-color: ease-in-out;
+}
+button:hover{
+    background-color: rgb(19, 19, 142);
+    transform: scale(1.1);
+}
+p{
+    color:bisque;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+span{
+    font-size: 17px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+h4{
+    color:wheat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background:#032c71;
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.section {
+    opacity: 0;
+}
+.animated {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+a{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    transition: font-size 0.3s ease-in-out;
+}
+a:hover{
+    font-size:larger;
+}

@@ -1,0 +1,33 @@
+h1{
+    margin:auto;
+    margin-left: 20%;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 300px;
+}
+
+.companero{
+    background: rgb(32, 202, 123);
+    border-radius:5px;
+    width: 95%;
+    height: auto;
+    margin-left: 0.83%;
+    margin-right: 0.83%;
+}
+
+.imgbox{
+    background: rgb(213, 230, 250);
+    width: 90%;
+    height: 45%;
+    margin: 5%;
+    border-radius:5px;
+}
+.companero h4{
+    margin-top:20%;
+    text-align: center;
+    font-family:  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+

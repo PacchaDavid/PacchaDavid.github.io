@@ -1,0 +1,21 @@
+main{
+    display:block;
+    align-items: center;
+    text-align:center;
+}
+img{
+    width: 50%;
+    height: auto;
+    margin-top:40px;
+    transition: transform 0.3s ease;
+}
+
+h2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    margin:auto;
+    margin-top: 60px;
+}
+
+img:hover{
+    transform: scale(1.2);
+}

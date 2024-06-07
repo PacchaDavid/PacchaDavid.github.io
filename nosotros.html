@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio-Informacion</title>
+ <link rel="stylesheet" href="styles/style.css"> 
+ <link rel="stylesheet" href="styles/nosotros.css">
+</head>
+<body class="section">
+  <header>
+    <h5>TeleRobot</h5>
+    <h1>Sobre Nuestro Equipo</h1>
+  </header>
+  <nav>
+    <ul>
+      <li ><a href="index.html" class = "animation">Inicio</a></li>
+      <li ><a href="nosotros.html" class = "animation">Nosotros</a></li>
+      <li ><a href="informacion.html" class = "animation">Información</a></li>
+      <li ><a href="materiales.html" class = "animation">Materiales</a></li>
+      <li ><a href="graficos.html" class = "animation">Gráficos</a></li>
+      <li ><a href="controls.html" class = "animation">Controles</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class = "container">
+      <div class = "companero">
+        <div class = "imgbox">
+          <img src="" alt="Kevin Nole">
+        </div>
+        <h4>Kevin Nole</h4>
+      </div>
+      <div class = "companero">
+        <div class = "imgbox">
+          <img src="" alt="Cristian">
+        </div>
+        <h4>Cristian Tomalá</h4>
+      </div>
+      <div class = "companero">
+        <div class = "imgbox">
+          <img src="" alt="Leo">
+        </div>
+        <h4>Leonardo Espinoza</h4>
+      </div>
+      <div class = "companero">
+        <div class = "imgbox">
+          <img src="" alt="Mateo">
+        </div>
+        <h4>Mateo Silva</h4>
+      </div>
+      <div class = "companero">
+        <div class = "imgbox">
+          <img src="" alt="Paccha">
+        </div>
+        <h4>David Paccha</h4>
+      </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+        section.classList.add('animated');
+    });
+  });
+
+  </script>
+</body>
+</html>

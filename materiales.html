@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materiales</title>
+ <link rel="stylesheet" href="styles/style.css"> 
+ <link rel="stylesheet" href="styles/materiales.css">
+</head>
+<body class="section">
+  <header>
+    <h5>TeleRobot</h5>
+    <h1>Materiales del Proyecto integrador de saberes</h1>
+  </header>
+  <nav>
+    <ul>
+      <li ><a href="index.html" class = "animation">Inicio</a></li>
+      <li ><a href="nosotros.html" class = "animation">Nosotros</a></li>
+      <li ><a href="informacion.html" class = "animation">Información</a></li>
+      <li ><a href="materiales.html" class = "animation">Materiales</a></li>
+      <li ><a href="graficos.html" class = "animation">Gráficos</a></li>
+      <li ><a href="controls.html" class = "animation">Controles</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class = "container">
+      <div class = "box">
+        <h2>Placa ESP32-cam</h2>
+        <p>La Esp 32 Cam es una placa de la familia ESP32 de bajo costo, que incluye una cámara integrada de tamaño pequeño, ideal para la aplicación y construcción de proyectos de bricolaje.
+          Esta placa además integra WIFI, bluetooth y BLE de bajo consumo, cuenta con 2 CPU LX6 de 32 bits de alto rendimiento. Conforma una arquitectura de tubería de 7 etapas, incluso cuenta con sensores de algunos tipos, en tanto que su frecuencia principal varía de 80 MHz a 240 MHz.
+          </p>
+          <p>Más información técnica<a href="https://loboris.eu/ESP32/ESP32-CAM%20Product%20Specification.pdf" target="_blank">aquí</a></p>
+      </div>
+      <div class = "box1">
+        <img src="imgs/ESP32CAM.jpg" alt="Placa-esp32cam">
+      </div>
+    </div>
+    <div class = "container">
+      <div class = "box1">
+        <img src="imgs/sensorFuerza.jpg" alt="Sensor de fuerza">
+      </div>
+      <div class = "box">
+        <h2>Sensor de fuerza FSR400</h2>
+        <p>Se trata de un resistor de la familia de detección de FuerzaTM, este tipo de resistores suelen estar hechos de una capa de polímero grueso y robusto donde se demuestra una disminución de resistencia con el aumento de fuerza la cual es aplicada en la superficie del sensor.</p>
+        <p>visite el siguiente <a href="https://cdn.sparkfun.com/assets/6/7/6/d/e/FSR_Sensors_datasheet.pdf" target="_blank">enlace</a> para más información técnica</p>
+      </div>
+    </div>
+    
+    
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+        section.classList.add('animated');
+    });
+  });
+
+  </script>
+</body>
+</html>

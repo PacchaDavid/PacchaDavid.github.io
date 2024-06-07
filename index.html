@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio-Informacion</title>
+ <link rel="stylesheet" href="styles/style.css"> 
+ <link rel="stylesheet" href="styles/index.css">
+</head>
+<body class="section">
+  <header>
+    <h5>TeleRobot</h5>
+    <h1>Proyecto integrador de saberes PIS</h1>
+  </header>
+  <nav>
+    <ul>
+      <li ><a href="index.html" class = "animation">Inicio</a></li>
+      <li ><a href="nosotros.html" class = "animation">Nosotros</a></li>
+      <li ><a href="informacion.html" class = "animation">Información</a></li>
+      <li ><a href="materiales.html" class = "animation">Materiales</a></li>
+      <li ><a href="graficos.html" class = "animation">Gráficos</a></li>
+      <li ><a href="controls.html" class = "animation">Controles</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div id = "general">
+      <h2 id = "bienvenida">Bienvenido</h2>
+      <img src="imgs/BrazoModelo.webp" alt="modeloDelbrazoRobótico">
+      <h2>Proyecto TeleRobot</h2>
+      <div class = "paragraph">
+        <p>Nos complace darle la bienvenida a nuestra página web, diseñada con el objetivo primordial de presentar nuestro proyecto: TeleRobot. Este proyecto surge como respuesta a la necesidad de abordar los desafíos ambientales que enfrenta nuestro planeta en la actualidad, particularmente en lo que respecta a la contaminación.</p>
+
+          <p>Creemos firmemente en el poder de la tecnología para ofrecer soluciones innovadoras y efectivas. TeleRobot representa nuestro compromiso con el desarrollo de soluciones tecnológicas que aborden de manera integral el problema de la contaminación.</p>
+          
+          <p>Estamos convencidos de que el manejo adecuado de los residuos es fundamental para lograr este objetivo, y es por eso que hemos centrado nuestros esfuerzos en desarrollar soluciones que permitan una gestión más eficiente y responsable de los mismos.</p>
+          
+          <p>A través de esta plataforma, nos esforzamos por proporcionar información apropiada sobre nuestro proyecto.</p>
+          
+          <p>Únase a nosotros en este emocionante viaje hacia un futuro más limpio y sostenible. Juntos, podemos marcar la diferencia y dejar un legado positivo para las generaciones venideras.</p>
+          <p id = "info">información del modelo 3D del brazo <a href="https://www.thingiverse.com/thing:1015238" target="_blank">aquí</a></p>
+      </div>
+    </div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+        section.classList.add('animated');
+    });
+  });
+
+  </script>
+</body>
+</html>

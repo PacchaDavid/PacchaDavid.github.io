@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio-Informacion</title>
+ <link rel="stylesheet" href="styles/style.css"> 
+</head>
+<body class="section">
+  <header>
+    <h5>TeleRobot</h5>
+    <h1>Información del Proyecto integrador de saberes</h1>
+  </header>
+  <nav>
+    <ul>
+      <li ><a href="index.html" class = "animation">Inicio</a></li>
+      <li ><a href="nosotros.html" class = "animation">Nosotros</a></li>
+      <li ><a href="informacion.html" class = "animation">Información</a></li>
+      <li ><a href="materiales.html" class = "animation">Materiales</a></li>
+      <li ><a href="graficos.html" class = "animation">Gráficos</a></li>
+      <li ><a href="controls.html" class = "animation">Controles</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div id = "navigation">
+      <ol>
+        <li ><a href="#info1" class = "motion">Antecedentes</a></li>
+        <li><a href="#info2" class = "motion" >Problemática</a></li>
+        <li ><a href="#info3" class = "motion" >Propuesta</a></li>
+        <li><a href="#info4" class = "motion" >Objetivos</a></li>
+        <li><a href="#info5" class = "motion">Requerimientos</a></li>
+      </ol>
+    </div>
+    <div id = "content">
+        <h2 id = "info1">Antecedentes</h2>
+        <p>Este proyecto surgió como una iniciativa para abordar la recolección de residuos, centrándose en materiales reciclables. Nuestra meta principal fue desarrollar un brazo robótico capaz de ofrecer una solución integral a este desafío. Buscábamos no solo mejorar la eficiencia de la recolección, sino también promover una gestión sostenible de desechos.
+
+          El proyecto fue un éxito, logrando crear un sistema que integra tanto la recolección manual como la automatizada. Mediante el uso de pulsadores, se facilitó el control manual del brazo robótico, permitiendo una operación intuitiva y eficaz.</p>
+        <h2 id = "info2">Problemática</h2>
+        <p>En este proyecto, continuaremos mejorando el brazo robótico. En este momento, nos enfrentamos al desafío de hacer que el brazo pueda funcionar de manera remota o a distancia. Esto implica la capacidad de operar el brazo sin necesidad de estar físicamente presentes en el lugar donde se encuentra. Esta funcionalidad es crucial en situaciones de emergencia que nos impidan acceder al entorno físico. Por lo tanto, nuestro próximo paso es buscar soluciones para el control remoto del brazo.</p>
+        <h2 id = "info3" >Propuesta</h2>       
+        <p>Conscientes al desafío a afrontar, se llego a la siguiente solución: manejar el dispositivo mediante una aplicación o una página web, donde además de poder controlarlo de forma remota, tendrá incorporada una cámara para captar el entorno de manera virtual, y conocer por medio de un sensor de fuerza el peso de los objetos y/o desechos que el brazo manipule.</p>
+        <h2 id = "info4" >Objetivos</h2>
+        <ul>
+          <li>Identificar las funcionalidades que va a proporcionar la página al usuario para que este tenga una experiencia satisfactoria cumpliendo con sus expectativas, debido a ello se recurrirá a lo que se llaman historias de uso y casos de uso.</li>
+          <li>Crear un prototipo de la interfaz que se va a implementar para el manejo del brazo robótico, con la meta de hacerla intuitiva para el usuario para que este no cometa errores que puedan llegar a darle una mala experiencias.</li>
+          <li>Elaborar conjunto de datos que serán mostrados en la interfaz en tiempo real y que el usuario interpretara y podrá hacer con ellos lo que necesite, esto gracias a los sensores y la cámara que constantemente capturan datos y los envían a la interfaz permitiendo asi conocer los alrededores del brazo y los objetos que haya recolectado.</li>
+        </ul>
+        <h2 id = "info5">Requerimientos</h2>
+        <h3>Para programación orientado a objetos se requiere: </h3>
+          <ul>
+            <li>Uso de los conocimientos básicos de la codificación de páginas HTML y CSS</li>
+            <li>Conocimientos adquiridos de los diagramas de clases y los casos de uso</li>
+            <li>Implementación correcta en la interfaz utilizada para la creación de códigos. </li>
+          </ul>
+
+
+        <h3>Para Emprendimiento e Innovación Tecnológica: </h3>
+          <ul>
+            <li>Conocer el estudio de mercado que se genera en el ambiente tecnológico. </li>
+          </ul>
+        <h3>Para análisis matemático: </h3>
+          <ul>
+            <li>Conocer el peso de objetos por medio de sensores que faciliten el trabajo</li>Para Teoría de la probabilidad:
+            <li>Generar una tabla sobre el peso de los objetos que se encuentren en el entorno del brazo robótico. </li>
+          </ul>
+        <h3>Para Diseño de Circuitos: </h3>
+          <ul>
+            <li>Generar un buen uso del hardware del circuito por medio de los conocimientos adiquiridos. </li>
+          </ul>
+          
+          
+    </div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+        section.classList.add('animated');
+    });
+  });
+
+  </script>
+</body>
+</html>

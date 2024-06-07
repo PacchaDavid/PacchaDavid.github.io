@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Controles</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <style></style>
+</head>
+<body class = "section">
+  <header>
+    <h1>Control Remoto de Brazo Robótico</h1>
+  </header>
+  <div class = "container">
+    <div class = "box">
+      <div id = "cajaNegra">
+        <p>Aquí va la imagen de la camara</p>
+      </div>
+      <div>
+        <a href="index.html">Volver al inicio</a>
+      </div>
+      <div class = "container">
+        <div>
+
+        </div>
+        <div class = "subBox">
+          <h4>Sensor 1</h4>
+          <p><span id = "sensor1">Esperando conexión...</span></p>
+        </div>
+        <div class = "subBox">
+          <h4>Sensor 2</h4>
+          <p><span id = "sensor2">Esperando conexión...</span></p>
+        </div>
+      </div>
+    </div>
+    <div class = "box">
+      <h3 id = "h3sup">Servo 1</h3>
+      <div class = "control">
+        <input id = "slider1" type="range" min = "0" max = "180" value = "90">
+        <p><span id = "angle1">90</span></p>
+      </div>
+      <div class = "control">
+        <button id = "enviar1">Enviar</button>
+      </div>
+      <h3>Servo 2</h3>
+      <div class = "control">
+        <input id = "slider2" type="range" min = "0" max = "180" value = "90">
+        <p><span id = "angle2">90</span></p>
+      </div>
+      <div class = "control">
+        <button id = "enviar2">Enviar</button>
+      </div>
+      <h3>Servo 3</h3>
+      <div class = "control">
+        <input id = "slider3" type="range" min = "0" max = "180" value = "90">
+        <p><span id = "angle3">90</span></p>
+      </div>
+      <div class = "control">
+        <button id = "enviar3">Enviar</button>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+        section.classList.add('animated');
+    });
+    });
+
+    var slider1 = document.getElementById("slider1");
+    var slider2 = document.getElementById("slider2");
+    var slider3 = document.getElementById("slider3");
+
+    var angle1 = document.getElementById("angle1");
+    var angle2 = document.getElementById("angle2");
+    var angle3 = document.getElementById("angle3");
+
+    var enviar1 = document.getElementById("enviar1");
+    var enviar2 = document.getElementById("enviar2");
+    var enviar3 = document.getElementById("enviar3");
+
+    var sensor1 = document.getElementById("sensor1");
+    var sensor2 = document.getElementById("sensor2");
+
+
+    document.addEventListener('keydown',moveSlider);
+
+    function moveSlider(event){
+      switch(event.key){
+        case "ArrowUp":
+          slider1.value = parseInt(slider1.value) + 2;
+          break;
+        case "ArrowDown":
+          slider1.value = parseInt(slider1.value) - 2;
+          break;
+        case "ArrowRight":
+          slider2.value = parseInt(slider2.value) + 2;
+          break;
+        case "ArrowLeft":
+          slider2.value = parseInt(slider2.value) - 2;
+          break;
+        default:
+          break;
+      }
+      
+      if(event.key === "ArrowUp" || event.key === "ArrowDown"){
+        angle1.textContent = slider1.value;
+        enviarSolicitudGET("/set_angle","angle1",slider1.value);
+      }
+      if(event.key === "ArrowLeft" || event.key === "ArrowRight"){
+        enviarSolicitudGET("/set_angle","angle",slider2.value);
+        angle2.textContent = slider2.value;
+      }
+      
+    }
+
+    slider1.addEventListener('input',function(){
+      angle1.textContent = slider1.value;
+    });
+    slider2.addEventListener('input',function(){
+      angle2.textContent = slider2.value;
+    });
+    slider3.addEventListener('input',function(){
+      angle3.textContent = slider3.value;
+    });
+
+    function enviarSolicitudGET(ruta,parametro,valor){
+      var xhttp = new XMLHttpRequest();
+      var accion = ruta + "?" + parametro + "=" + valor;
+      xhttp.open("GET",accion,true);
+      if(xhttp.status >= 200 && xhttp.status<300){
+        console.log("solicitud enviada correctamente");
+      }
+      xhttp.send();
+    }
+
+    enviar1.addEventListener('click',function(){
+      enviarSolicitudGET("/set_angle","angle1",slider1.value);
+    });
+    enviar2.addEventListener('click',function(){
+      enviarSolicitudGET("/set_angle","angle2",slider2.value);
+    });
+    enviar3.addEventListener('click',function(){
+      enviarSolicitudGET("/set_angle","angle3",slider3.value);
+    });
+
+    var ws = new WebSocket("ws://" + window.location.hostname + "/ws");
+    
+    function estadoString(data){
+      if(data === "0"){
+        return "LOW";
+      }else if(data === "1"){
+        return "HIGH";
+      }
+    }
+
+    ws.onmessage = function(event){
+      const data = event.data.split(",");
+      sensor1.textContent = estadoString(data[0]);
+      sensor2.textContent = estadoString(data[1]);
+    }
+
+
+  </script>
+</body>
+</html>

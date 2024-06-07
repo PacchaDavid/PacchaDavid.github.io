@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráficos</title>
+ <link rel="stylesheet" href="styles/style.css"> 
+ <link rel="stylesheet" href="styles/graficos.css">
+</head>
+<body class="section">
+  <header>
+    <h5>TeleRobot</h5>
+    <h1>Gráficos del Proyecto integrador de saberes</h1>
+  </header>
+  <nav>
+    <ul>
+      <li ><a href="index.html" class = "animation">Inicio</a></li>
+      <li ><a href="nosotros.html" class = "animation">Nosotros</a></li>
+      <li ><a href="informacion.html" class = "animation">Información</a></li>
+      <li ><a href="materiales.html" class = "animation">Materiales</a></li>
+      <li ><a href="graficos.html" class = "animation">Gráficos</a></li>
+      <li ><a href="controls.html" class = "animation">Controles</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Diagrama de clases UML</h2>
+    <img src="imgs/diagramaClases.png" alt="diagrama de clases UML">
+    <h2>Diagrama de Casos de uso</h2>
+    <img src="imgs/casosDeUso.png" alt="Diagrama de Casos de Uso">
+    <h2>Historias de Usuario</h2>
+    <img src="imgs/UH1.png" alt="historia1">
+    <img src="imgs/UH2.png" alt="historia2">
+    <img src="imgs/UH3.png" alt="historia3">
+
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+        section.classList.add('animated');
+    });
+  });
+
+  </script>
+</body>
+</html>
